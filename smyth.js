@@ -20,7 +20,7 @@ async function loadRooms() {
     }
     data.forEach(function(room) {
     
-        const button = document.createElement('button');   
+        const button = document.createElement('button');     
 
         button.textContent = `Room ${room.room_number}: ${room.name}`;
 
