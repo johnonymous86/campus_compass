@@ -36,13 +36,19 @@ async function loadRooms() {
 
         button.textContent = `Room ${room.building}: ${room.room_number} - ${room.name}`;
 
+        button.addEventListener('click', function() {
+
+            console.log('clicked', room.id);
+        
         editingID = room.id;
 
-        editName = room.name;
+        editName.value = room.name;
 
-        editNumber = room.room_number;
+        editNumber.value = room.room_number;
 
-        editForm = block;
+        editForm.style.display = "block";
+
+    });
 
         list.appendChild(button);
 
