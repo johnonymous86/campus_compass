@@ -1,6 +1,10 @@
 const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supabase.co', 'sb_publishable_u6CrbHQYoheiiJjYvgUb4Q_vlT_zyH1');
 const list = document.getElementById('room-list');
 const adminSection = document.getElementById('admin-section');
+const editForm = document.getElementById('edit-form');
+const editName = document.getElementById('edit-name');
+const editNumber = document.getElementById('edit-number');
+let editingID = null;
 
 (async function() {
     
@@ -32,7 +36,13 @@ async function loadRooms() {
 
         button.textContent = `Room ${room.building}: ${room.room_number} - ${room.name}`;
 
-       
+        editingID = room.id;
+
+        editName = room.name;
+
+        editNumber = room.room_number;
+
+        editForm = block;
 
         list.appendChild(button);
 

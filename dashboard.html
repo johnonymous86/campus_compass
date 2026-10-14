@@ -13,6 +13,18 @@
     <div id="admin-section" style="display: none;">
         <h1>You are logged in!</h1>
         <ul id="room-list"></ul>
+
+        <form id="edit-form" style="display: none;">
+            <h2>Edit room</h2>
+            <label for="edit-name">Name</label>
+            <input type="text" id="edit-name" required>
+        
+            <label for="edit-number">Room number</label>
+            <input type="text" id="edit-number" required>
+        
+            <button type="submit">Save</button>
+            <p id="edit-message"></p>
+        </form>
     </div>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
