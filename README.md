@@ -21,11 +21,11 @@ Also, I have decided to change the name of the application to
 
 ![Campus Compass](assets/Campus_Compass%20(6).png)
 
-Update 9/19
+## Update 9/19
 
 Successfully connected with Supabase and created user persistance. Still working on making the dashboard secure, which involves coding a seperate JS file for the logic that occurs once the user passes credentials and that page loads. Running into some difficulty with async function but basic user authentication now occurs with Supabase, not in browser and the data is persistant, so I'll take success where I can get it. 
 
-Update 10/12
+## Update 10/12
 
 Major changes in the approach to interacting with map content. Previously, my approach was to create static URLs for each iteration of the map (i.e., if you are looking for Office 100, you click on that link and the server shows /office-100, a unique document/page associated only with that URL). This seemed like a wildly inefficient way to approach the mapping. Some consideration was given to integrating GIS data but this proved to be outside the scope of the project. 
 
