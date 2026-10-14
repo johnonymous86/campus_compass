@@ -9,7 +9,7 @@ const adminSection = document.getElementById('admin-section');
     if(!session) {window.location.href = "user.html";} 
     
     else {
-        style.display = 'block';
+        adminSection.style.display = 'block';
     }
 
 
@@ -30,18 +30,12 @@ async function loadRooms() {
     
         const button = document.createElement('button');     
 
-        button.textContent = `Room ${room.building}: ${room.room_number} ${room.name}`;
+        button.textContent = `Room ${room.building}: ${room.room_number} - ${room.name}`;
 
-        button.addEventListener('click', function(){
-
-            marker.style.left = `${room.x}%`;
-
-            marker.style.top = `${room.y}%`;
-
-            marker.style.display = `block`;
-        })
+       
 
         list.appendChild(button);
 
 })};
+
 loadRooms();
