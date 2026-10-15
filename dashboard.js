@@ -11,7 +11,7 @@ loadRooms();
 
 editForm.addEventListener('submit', async function(event) {
     event.preventDefault();
-    if (editingID) {
+    if (editingID === null) {
         editMessage.textContent = 'Select a room first';
         return;}
 
