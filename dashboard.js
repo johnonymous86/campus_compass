@@ -11,7 +11,12 @@ loadRooms();
 
 editForm.addEventListener('submit', async function(event) {
     event.preventDefault();
-    console.log('save clicked, editing id:', editingID);
+    if (editingID) {
+        editMessage.textContent = 'Select a room first';
+        return;}
+
+    const numberValue = editNumber.value.trim();
+    const nameValue = editName.value.trim();
 });
 
 (async function() {
