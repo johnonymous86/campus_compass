@@ -4,7 +4,15 @@ const adminSection = document.getElementById('admin-section');
 const editForm = document.getElementById('edit-form');
 const editName = document.getElementById('edit-name');
 const editNumber = document.getElementById('edit-number');
+const editMessage = document.getElementById('edit-message');
 let editingID = null;
+
+loadRooms();
+
+editForm.addEventListener('submit', async function(event) {
+    event.preventDefault();
+    console.log('save clicked, editing id:', editingID);
+});
 
 (async function() {
     
@@ -37,8 +45,6 @@ async function loadRooms() {
         button.textContent = `Room ${room.building}: ${room.room_number} - ${room.name}`;
 
         button.addEventListener('click', function() {
-
-            console.log('clicked', room.id);
         
         editingID = room.id;
 
@@ -54,4 +60,4 @@ async function loadRooms() {
 
 })};
 
-loadRooms();
+
