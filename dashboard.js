@@ -17,6 +17,22 @@ editForm.addEventListener('submit', async function(event) {
 
     const numberValue = editNumber.value.trim();
     const nameValue = editName.value.trim();
+    
+    const { data, error } = await supabaseClient
+    .from('rooms')
+    .update({ name: nameValue, room_number: numberValue })
+    .eq('id', editingID)
+    .select();
+
+    if (error) {
+        editMessage.textContent = 'Request Failed.';
+        return;
+    }
+
+    if (data.length === 0) {
+        editMessage.textContent = 'Log In Again.';
+        return;
+    }
 });
 
 (async function() {
