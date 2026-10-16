@@ -30,9 +30,13 @@ editForm.addEventListener('submit', async function(event) {
     }
 
     if (data.length === 0) {
-        editMessage.textContent = 'Log In Again.';
+        editMessage.textContent = 'Log in again.';
         return;
     }
+
+    editMessage.textContent = 'Saved.';
+
+    loadRooms();
 });
 
 (async function() {
@@ -59,7 +63,9 @@ async function loadRooms() {
         return;
     }
 
-    data.forEach(function(room) {
+        list.textContent = '';
+
+        data.forEach(function(room) {
     
         const button = document.createElement('button');     
 
