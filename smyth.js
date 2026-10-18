@@ -42,6 +42,18 @@ async function loadRooms() {
 
         list.appendChild(button);
 
-})};
+})
+//specify which room to return
+if (requestedRoom !==null) {
+
+    const match = data.find(function(room) {
+        return room.id === Number(requestedRoom);
+    })
+    if (match) {
+        showRoom(match);
+    }
+}
+
+};
 loadRooms();
 
