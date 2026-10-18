@@ -2,6 +2,17 @@ const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supab
 const list = document.getElementById('room-list');
 const marker = document.getElementById('marker');
 const map = marker.parentElement; //remove after logging locations
+const params = new  URLSearchParams(window.location.search);
+const requestedRoom = params.get('room');
+
+function showRoom(room) {
+
+    marker.style.left = `${room.x}%`;
+
+            marker.style.top = `${room.y}%`;
+
+            marker.style.display = `block`;
+}
 
 map.addEventListener('click', function(event) {
     const rect = map.getBoundingClientRect();
@@ -26,11 +37,7 @@ async function loadRooms() {
 
         button.addEventListener('click', function(){
 
-            marker.style.left = `${room.x}%`;
-
-            marker.style.top = `${room.y}%`;
-
-            marker.style.display = `block`;
+            showRoom(room);
         })
 
         list.appendChild(button);
