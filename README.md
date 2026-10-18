@@ -32,3 +32,15 @@ Major changes in the approach to interacting with map content. Previously, my ap
 [Additional research](https://community.adobe.com/questions-621/responsive-image-map-not-working-642544) pointed towards image mapping with hot spots [W3Schools Image Map breakdown](https://www.w3schools.com/html/html_images_imagemap.asp). Using a combination of HTML and JS, I can code buttons for each location in an area. Placing the image inside an HTML container allows the location of pixels to be mapped like coordinates on a map. The buttons are populated with data from the Supabase DB which corresponds to a specific x and y location on the jpeg, so that pressing the button indicates a corresponding x & y coordinate. 
 
 The full map piece works but more detailing has to be put into the configuration as right now, the coordinates are just random points on the container. Still, a small but significant success.
+
+## Update 10/18
+
+Working prototype is effectively complete. Though I have only completed this work for one map so far, a second set at the very least will be added before final project submission. 
+
+Major development in that logged in users now have the ability to write changes to the Supabase DB and have those changes persist. I am still considering whether to allow delete or create permission - if I decide not to, which is probably what I will do, policies will have to be removed in Supabase that were initially put in place during set up allowing these functions.
+
+Second major development is coding the drop-downs to behave like select buttons by moving marker logic out of button listener and making higher level independent action. Now, when user selects an employee or department, the selection pulls the location data from supabase and shows the location on the map. This is closer in line with my original intentions for the application so I am happy I was able to finalize this functionality. 
+
+Additional polishing in the html to correspond with the new drop-down logic involved creating additional records and cleaning up some minor obsolete nav and text.
+
+The biggest remaining challenge will be finalizing the design around the site functions as closely as possible to my intial project proposal and style guide.
