@@ -13,27 +13,37 @@
     <p>Use the options below to find your way!</p>
 
     <form>
-        <label for="building">Select a building</label>
+        <label for="building">Select a building:</label>
        <select name="building" id="building" onchange="window.location.href=this.value;">
         <option value="" selected disabled hidden></option>
-        <option value="grayson.html">Grayson Hall</option>
         <option value="smyth.html">Smyth Hall</option>
        </select> 
     </form>
 
     <form>
-        <label for="department">Select a department</label>
+        <label for="department">Select a department:</label>
        <select name="department" id="department" onchange="window.location.href=this.value;">
         <option value="" selected disabled hidden></option>
+        <option value="smyth.html?room=1">1 Stop</option>
         <option value="smyth.html?room=5">Admissions</option>
         <option value="smyth.html?room=8">Financial Aid</option>
-        <option value="grayson.html#forensics">Forensics</option>
-        <option value="grayson.html#it">Information Technology</option>
-        <option value="smyth.html#kinseology">Kinseology</option>
-        <option value="smyth.html#parapsychology">Parapsychology</option>
-        <option value="smyth.html#philology">Philology</option>
-        <option value="grayson.html#pre-med">Pre Medicine</option>
+        <option value="smyth.html?room=2">Police Department</option>
+        <option value="smyth.html?room=3">Scholarship Office</option>
+        <option value="smyth.html#kinseology">Testing Center</option>
         <option value="user.html">login</option>
+
+       </select>
+    </form>
+
+    <form>
+        <label for="office">Select an employee:</label>
+       <select name="office" id="office" onchange="window.location.href=this.value;">
+        <option value="" selected disabled hidden></option>
+        <option value="smyth.html?room=9">Dean of Student Services</option>
+        <option value="smyth.html?room=10">Dr. Bob Loblaw - Legal Studies</option>
+        <option value="smyth.html?room=11">Jim Naseum - Kinesiology Professor</option>
+        <option value="smyth.html?room=12">Dr. Callum "Cal" Culator - Math Professor</option>
+        <option value="smyth.html?room=13">Dr. Flora Ide - Dental Hygiene Professor</option>
 
        </select>
     </form>
