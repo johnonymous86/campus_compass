@@ -15,7 +15,7 @@
     <script src="auth.js" defer></script>
     
 
-    <div class="container-fluid py-3 d-flex justify-content-between align-items-center">
+    <div class="container-fluid header-inner py-3 d-flex justify-content-between align-items-center">
         <a href="index.html">
             <picture>
                 <source media="(min-width: 768px)" srcset="assets/cc_logo.png">
@@ -45,9 +45,10 @@
 </head>
 <body>
     <main class="content-box">
-    <h1>Welcome to Campus Compass!
-    </h1>
-    <p>Use the options below to find your way!</p>
+      <div class="content-text">  
+        <h1>Welcome to Campus Compass!
+        </h1>
+        <p>Use the options below to find your way!</p>
 
     <form>
         <label for="building">Select a building:</label>
@@ -84,7 +85,11 @@
 
        </select>
     </form>
-   
+  </div>
+ <div class="content-image d-none d-md-block">
+    <img src="assets/Aerial.jpg" alt="" loading="lazy">
+ </div>
+
 </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
