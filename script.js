@@ -2,7 +2,7 @@ const loginForm = document.getElementById('login-form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const errorBox = document.getElementById('error-box');
-const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supabase.co', 'sb_publishable_u6CrbHQYoheiiJjYvgUb4Q_vlT_zyH1')
+
 
 loginForm.addEventListener('submit', async function(event) {
 

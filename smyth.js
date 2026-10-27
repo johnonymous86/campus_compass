@@ -1,4 +1,3 @@
-const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supabase.co', 'sb_publishable_u6CrbHQYoheiiJjYvgUb4Q_vlT_zyH1');
 const list = document.getElementById('room-list');
 const marker = document.getElementById('marker');
 const map = marker.parentElement; //remove after logging locations

@@ -1,4 +1,3 @@
-const supabaseClient = supabase.createClient('https://lcyboumcokkwtaihvnox.supabase.co', 'sb_publishable_u6CrbHQYoheiiJjYvgUb4Q_vlT_zyH1');
 const list = document.getElementById('room-list');
 const adminSection = document.getElementById('admin-section');
 const editForm = document.getElementById('edit-form');
