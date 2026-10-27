@@ -7,6 +7,16 @@
     width: auto;
 }
 
+.content-box {
+    background-color: #960948;
+    color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 720px;
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+}
+
 @media (min-width: 768px) {
     .site-logo {
         height: 90px;
