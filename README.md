@@ -44,3 +44,9 @@ Second major development is coding the drop-downs to behave like select buttons 
 Additional polishing in the html to correspond with the new drop-down logic involved creating additional records and cleaning up some minor obsolete nav and text.
 
 The biggest remaining challenge will be finalizing the design around the site functions as closely as possible to my intial project proposal and style guide.
+
+## Update 10/27
+
+Thus begins styling. Some minor changes to the UX and UI design that shouldn't ultimately change functionality. Added what should be the final piece of JavaScript via auth.js, which keeps track of whether a user is logged in and changes the option to login or logout depending on if user is in active session. If I were to present this as a final product to a school, I would remove the public login option from the page as I don't want normal users to accidentally land on the log in page. But for the sake of creating a workable project application and because that area of the page looked naked, I added it to version 1.0. 
+
+With most of the styling done on index.html, I move on to the other pages. 
