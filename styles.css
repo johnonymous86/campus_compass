@@ -11,10 +11,11 @@
     background-color: #960948;
     color: #fff;
     border-radius: 16px;
-    padding: 2rem;
     max-width: 1170px;
     width: calc(100% - 2rem);
     margin: 2rem auto;
+    overflow: hidden;
+    display: flex;
 }
 
 .content-text {
@@ -37,6 +38,11 @@
 
 .header-inner {
     padding-left: 3rem;
+}
+
+.content-text form {
+    max-width: 420px;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {

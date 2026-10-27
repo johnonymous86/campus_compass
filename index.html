@@ -48,20 +48,20 @@
       <div class="content-text">  
         <h1>Welcome to Campus Compass!
         </h1>
-        <p>Use the options below to find your way!</p>
+        <p>Use the options below to look up locations on campus!</p>
 
     <form>
-        <label for="building">Select a building:</label>
-       <select name="building" id="building" onchange="window.location.href=this.value;">
-        <option value="" selected disabled hidden></option>
+        <label for="building" class="visually-hidden">Select a building:</label>
+       <select name="building" id="building" class="form-select form-select-lg" onchange="window.location.href=this.value;">
+        <option value="" selected disabled hidden>Select a building</option>
         <option value="smyth.html">Smyth Hall</option>
        </select> 
     </form>
 
     <form>
-        <label for="department">Select a department:</label>
-       <select name="department" id="department" onchange="window.location.href=this.value;">
-        <option value="" selected disabled hidden></option>
+        <label for="department" class="visually-hidden">Select a department:</label>
+       <select name="department" id="department" class="form-select form-select-lg" onchange="window.location.href=this.value;">
+        <option value="" selected disabled hidden>Select a department</option>
         <option value="smyth.html?room=1">1 Stop</option>
         <option value="smyth.html?room=5">Admissions</option>
         <option value="smyth.html?room=8">Financial Aid</option>
@@ -74,9 +74,9 @@
     </form>
 
     <form>
-        <label for="office">Select an employee:</label>
-       <select name="office" id="office" onchange="window.location.href=this.value;">
-        <option value="" selected disabled hidden></option>
+        <label for="office" class="visually-hidden">Select an employee:</label>
+       <select name="office" id="office" class="form-select form-select-lg" onchange="window.location.href=this.value;">
+        <option value="" selected disabled hidden>Select an employee</option>
         <option value="smyth.html?room=9">Dean of Student Services</option>
         <option value="smyth.html?room=10">Dr. Bob Loblaw - Legal Studies</option>
         <option value="smyth.html?room=11">Jim Naseum - Kinesiology Professor</option>
