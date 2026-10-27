@@ -1,5 +1,6 @@
 :root {
     --bs-body-font-family: 'Montserrat', sans-serif;
+    --page-width: 1170px;
 }
 
 .site-logo {
@@ -16,6 +17,7 @@
     margin: 2rem auto;
     overflow: hidden;
     display: flex;
+    max-width: var(--page-width);
 }
 
 .content-text {
@@ -37,8 +39,15 @@
 }
 
 .header-inner {
-    padding-left: 3rem;
+    max-width: 1170px;
+    width: calc(100% - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: var(--page-width);
 }
+
 
 .content-text form {
     max-width: 420px;
@@ -51,8 +60,3 @@
     }
 }
 
-@media (max-width: 767.98px) {
-    .header-inner {
-        padding-left: 1rem;
-    }
-}
