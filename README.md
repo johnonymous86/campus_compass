@@ -19,7 +19,7 @@ Also, I have decided to change the name of the application to
 
 # Campus Compass!
 
-![Campus Compass](assets/Campus_Compass%20(6).png)
+![Campus Compass](assets/cc_logo.png)
 
 ## Update 9/19
 
