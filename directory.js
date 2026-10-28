@@ -1,5 +1,3 @@
-console.log('directory.js running');
-
 const buildingList = document.getElementById('building-list')
 const departmentList = document.getElementById('department-list')
 const employeeList = document.getElementById('employee-list')
@@ -24,8 +22,6 @@ function addLink(listElement, text, href) {
         console.log(error);
         return;
     }
-
-    console.log(data);
 
     const buildings = [...new Set(
         data.map(function(room) { return room.building; }).filter(Boolean)
