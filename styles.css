@@ -20,6 +20,10 @@
     max-width: var(--page-width);
 }
 
+.content-box a {
+    color: #fff;
+}
+
 .content-text {
     flex: 1 1 55%;
     padding: 2rem;
@@ -52,6 +56,10 @@
 .content-text form {
     max-width: 420px;
     margin-bottom: 1rem;
+}
+
+.navbar {
+    text-decoration-color: #fff;
 }
 
 @media (min-width: 768px) {
