@@ -32,6 +32,8 @@ async function loadRooms() {
     
         const button = document.createElement('button');     
 
+        button.className = 'btn btn-light';
+
         button.textContent = `Room ${room.room_number}: ${room.name}`;
 
         button.addEventListener('click', function(){

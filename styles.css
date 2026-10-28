@@ -62,6 +62,11 @@
     text-decoration-color: #fff;
 }
 
+.map {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
 @media (min-width: 768px) {
     .site-logo {
         height: 90px;

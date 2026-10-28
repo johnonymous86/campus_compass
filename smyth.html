@@ -14,57 +14,52 @@
     <script src="supabase-client.js" defer></script>
     <script src="auth.js" defer></script>
     <script src="smyth.js" defer></script>
-
-    <div class="container-fluid header-inner py-3 d-flex justify-content-between align-items-center">
-      <a href="index.html">
-          <picture>
-              <source media="(min-width: 768px)" srcset="assets/cc_logo.png">
-              <img src="assets/cc_logo.png" alt="Campus Directory home" class="site-logo">
-          </picture>
-      </a>
-      <div id="auth-controls"></div>
-  </div>
-
-  <nav class="navbar navbar-expand-md bg-black" data-bs-theme="dark">
-      <div class="container-fluid header-inner">
-          <button class="navbar-toggler ms-auto" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#main-nav"
-                  aria-controls="main-nav" aria-expanded="false"
-                  aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="main-nav">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="directory.html#buildings">Buildings</a></li>
-                <li class="nav-item"><a class="nav-link" href="directory.html#departments">Departments</a></li>
-                <li class="nav-item"><a class="nav-link" href="directory.html#employees">Employees</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>
-
-  </head>
+</head>
 <body>
-   <h1>Smyth Hall | 
-    Campus Compass
-   </h1>
-      
-      <hr>
+    <div class="container-fluid header-inner py-3 d-flex justify-content-between align-items-center">
+        <a href="index.html">
+            <picture>
+                <source media="(min-width: 768px)" srcset="assets/cc_logo.png">
+                <img src="assets/cc_logo.png" alt="Campus Directory home" class="site-logo">
+            </picture>
+        </a>
+        <div id="auth-controls"></div>
+    </div>
 
-      <div class="map" style="position: relative;">
-        <img src="assets/smyth.jpg" style="width: 100%; display: block;">
-        <div id="marker" style="position: absolute; display: none; width: 20px; height: 20px; border-radius: 50%; background: red; transform: translate(-50%, -50%);"></div>
-      </div>
+    <nav class="navbar navbar-expand-md bg-black" data-bs-theme="dark">
+        <div class="container-fluid header-inner">
+            <button class="navbar-toggler ms-auto" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <ul id="room-list"></ul>
-      
-     
-      </body>
-      </html>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html#buildings">Buildings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html#departments">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html#employees">Employees</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <main class="page-wrap">
+        <section class="room-panel">
+            <h1>Smyth Hall</h1>
+            <ul id="room-list"></ul>
+        </section>
 
+        <section class="map-panel">
+            <div class="map" style="position: relative;">
+                <img src="assets/smyth.jpg" alt="Smyth Hall floor plan" style="width: 100%; display: block;">
+                <div id="marker" style="position: absolute; display: none; width: 20px; height: 20px; border-radius: 50%; background: red; transform: translate(-50%, -50%);"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
