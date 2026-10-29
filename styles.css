@@ -20,6 +20,19 @@
     max-width: var(--page-width);
 }
 
+.page-wrap { 
+    max-width: 1170px;
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.map-panel {
+    order: -1;
+}
+
 .room-panel {
     margin: 2rem auto;
     max-width: var(--page-width);
