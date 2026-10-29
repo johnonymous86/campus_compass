@@ -20,6 +20,21 @@
     max-width: var(--page-width);
 }
 
+.room-panel {
+    margin: 2rem auto;
+    max-width: var(--page-width);
+}
+
+.login-container {
+    margin: 2rem auto;
+    max-width: var(--page-width);
+}
+
+.admin-section {
+    margin: 2rem auto;
+    max-width: var(--page-width);
+}
+
 .content-box a {
     color: #fff;
 }
