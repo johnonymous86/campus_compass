@@ -1,10 +1,20 @@
-const list = document.getElementById('room-list');
 const adminSection = document.getElementById('admin-section');
 const editForm = document.getElementById('edit-form');
 const editName = document.getElementById('edit-name');
 const editNumber = document.getElementById('edit-number');
 const editMessage = document.getElementById('edit-message');
+const buildingSelect = document.getElementById('building-select');
+const departmentSelect = document.getElementById('department-select');
+const employeeSelect = document.getElementById('employee-select');
+const roomSelect = document.getElementById('room-select');
 let editingID = null;
+let allRooms = [];
+
+const lowerSelects = [
+{ select: departmentSelect, category: 'department', placeholder:'Select a department' },
+{ select: employeeSelect, category: 'employee', placeholder: 'Select an employee' },
+{ select: roomSelect, category: 'room', placeholder: 'Select a room' }
+];
 
 loadRooms();
 
@@ -62,28 +72,35 @@ async function loadRooms() {
         return;
     }
 
-        list.textContent = '';
+    };
 
-        data.forEach(function(room) {
+        const buildings = [...new Set(
+            data.map(function(room) { return room.building; }).filter(Boolean)
+        )];
     
-        const button = document.createElement('button');     
-
-        button.textContent = `Room ${room.building}: ${room.room_number} - ${room.name}`;
-
-        button.addEventListener('click', function() {
-        
-        editingID = room.id;
-
-        editName.value = room.name;
-
-        editNumber.value = room.room_number;
-
-        editForm.style.display = "block";
-
+       buildings.forEach(function(building) {
+    
+        addLink(buildingList, building, `${building.toLowerCase()}.html`);
+       });
+    
+       const departments = data.filter(function(room) {
+        return room.category === 'department';
     });
+    
+    departments.forEach(function(room) {
+        addLink(departmentList, room.name, `${room.building.toLowerCase()}.html?room=${room.id}`);
+    });
+    
+    const employees = data.filter(function(room) {
+        return room.category === 'employee';
+    });
+    
+    employees.forEach(function(room) {
+        addLink(employeeList, room.name, `${room.building.toLowerCase()}.html?room=${room.id}`);
+    });
+     
+     
 
-        list.appendChild(button);
 
-})};
 
 

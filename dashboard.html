@@ -14,7 +14,9 @@
     <script src="supabase-client.js" defer></script>
     <script src="auth.js" defer></script>
     <script src="dashboard.js" defer></script>
+</head>
 
+<body>
     <div class="container-fluid header-inner py-3 d-flex justify-content-between align-items-center">
         <a href="index.html">
             <picture>
@@ -45,10 +47,10 @@
         </div>
     </nav>
 
-</head>
-<body>
     <div class="admin-section" id="admin-section" style="display: none;">
         <h1>You are logged in!</h1>
+
+            <p>First, select a building and then select from department, employee, or room to edit a record.</p>
 
         <div id="picker" class="mb-3">
             <label for="building-select" class="visually-hidden">Building</label>
