@@ -1,4 +1,3 @@
-const list = document.getElementById('room-list');
 const marker = document.getElementById('marker');
 const map = marker.parentElement; //remove after logging locations
 const params = new  URLSearchParams(window.location.search);
@@ -22,28 +21,15 @@ map.addEventListener('click', function(event) {
 
 
 async function loadRooms() {
-    const { data, error } = await supabaseClient.from('rooms').select().eq('building', 'Smyth');
+    const { data, error } = await supabaseClient.from('rooms').select().eq('building', 'Smyth Hall');
 
     if (error) {
         console.log(error);
         return;
     }
-    data.forEach(function(room) {
-    
-        const button = document.createElement('button');     
+   
 
-        button.className = 'btn btn-light';
 
-        button.textContent = `Room ${room.room_number}: ${room.name}`;
-
-        button.addEventListener('click', function(){
-
-            showRoom(room);
-        })
-
-        list.appendChild(button);
-
-})
 //specify which room to return
 if (requestedRoom !==null) {
 

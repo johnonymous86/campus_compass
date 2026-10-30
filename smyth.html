@@ -47,7 +47,32 @@
     <main class="page-wrap">
         <section class="room-panel">
             <h1>Smyth Hall</h1>
-            <ul id="room-list"></ul>
+            <form>
+                <label for="department" class="visually-hidden">Select a department:</label>
+               <select name="department" id="department" class="form-select form-select-lg" onchange="window.location.href=this.value;">
+                <option value="" selected disabled hidden>Select a department</option>
+                <option value="smyth.html?room=1">1 Stop</option>
+                <option value="smyth.html?room=5">Admissions</option>
+                <option value="smyth.html?room=8">Financial Aid</option>
+                <option value="smyth.html?room=2">Police Department</option>
+                <option value="smyth.html?room=3">Scholarship Office</option>
+                <option value="smyth.html?room=4">Testing Center</option>
+                
+        
+               </select>
+            </form>
+<br>
+            <form>
+                <label for="office" class="visually-hidden">Select an employee:</label>
+               <select name="office" id="office" class="form-select form-select-lg" onchange="window.location.href=this.value;">
+                <option value="" selected disabled hidden>Select an employee</option>
+                <option value="smyth.html?room=9">Dean of Student Services</option>
+                <option value="smyth.html?room=10">Dr. Bob Loblaw - Legal Studies</option>
+                <option value="smyth.html?room=11">Jim Naseum - Kinesiology Professor</option>
+                <option value="smyth.html?room=12">Dr. Callum "Cal" Culator - Math Professor</option>
+                <option value="smyth.html?room=13">Dr. Flora Ide - Dental Hygiene Professor</option>
+               </select>
+            </form>
         </section>
 
         <section class="map-panel">
