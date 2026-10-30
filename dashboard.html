@@ -50,7 +50,27 @@
     <div class="admin-section" id="admin-section" style="display: none;">
         <h1>You are logged in!</h1>
 
-        <ul id="room-list"></ul>
+        <div id="picker" class="mb-3">
+            <label for="building-select" class="visually-hidden">Building</label>
+            <select id="building-select" class="form-select form-select-lg mb-2">
+                <option value="" selected disabled hidden>Select a building</option>
+            </select>
+        
+            <label for="department-select" class="visually-hidden">Department</label>
+            <select id="department-select" class="form-select form-select-lg mb-2" disabled>
+                <option value="" selected disabled hidden>Select a department</option>
+            </select>
+        
+            <label for="employee-select" class="visually-hidden">Employee</label>
+            <select id="employee-select" class="form-select form-select-lg mb-2" disabled>
+                <option value="" selected disabled hidden>Select an employee</option>
+            </select>
+        
+            <label for="room-select" class="visually-hidden">Room</label>
+            <select id="room-select" class="form-select form-select-lg" disabled>
+                <option value="" selected disabled hidden>Select a room</option>
+            </select>
+        </div>
 
         <form id="edit-form" style="display: none;">
             <h2>Edit room</h2>
