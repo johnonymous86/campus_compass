@@ -1,81 +1,67 @@
-<!-- unpublishing content
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grayson Hall | Campus Compass</title>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grayson Hall | Campus Compass</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="supabase-client.js" defer></script>
+    <script src="auth.js" defer></script>
+    <script src="grayson.js" defer></script>
 </head>
 <body>
+    <div class="container-fluid header-inner py-3 d-flex justify-content-between align-items-center">
+        <a href="index.html">
+            <picture>
+                <source media="(min-width: 768px)" srcset="assets/cc_logo.png">
+                <img src="assets/cc_logo.png" alt="Campus Directory home" class="site-logo">
+            </picture>
+        </a>
+        <div id="auth-controls"></div>
+    </div>
 
-<h1>Grayson Hall |
-Campus Compass</h1>
+    <nav class="navbar navbar-expand-md bg-black" data-bs-theme="dark">
+        <div class="container-fluid header-inner">
+            <button class="navbar-toggler ms-auto" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="#floor1">Floor 1</a> |
-  <a href="#floor2">Floor 2</a>
-</nav>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html#buildings">Buildings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html#departments">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html#employees">Employees</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<hr>
+    <main class="page-wrap">
+        <section class="room-panel">
+            <h1>Grayson Hall</h1>
+            <ul id="room-list"></ul>
+        </section>
 
-<h2 id="floor1">Floor 1</h2>
+        <section class="map-panel">
+            <div class="map" style="position: relative;">
+                <img src="assets/grayson.jpg" alt="Grayson Hall floor plan" style="width: 100%; display: block;">
+                <div id="gr-marker" style="position: absolute; display: none; width: 20px; height: 20px; border-radius: 50%; background: red; transform: translate(-50%, -50%);"></div>
+            </div>
+        </section>
+    </main>
 
-<h3>People</h3>
-<ul>
-  <li>Dr. John Doe — Dean of Students — Room 105</li>
-  <li>Jane Doe — IT Support Specialist — Room 103</li>
-  <li>Kno Bodi — Registrar — Room 102</li>
-  <li>Pete Zahut — Admissions Counselor — Room 101</li>
-</ul>
-
-<h3>Departments</h3>
-<ul>
-  <li><a href="grayson.html#it"></a>Information Technology — Room 108</li>
-  <li><a href="grayson.html#admissions"></a>Admissions — Room 118</li>
-</ul>
-
-<h3>Rooms</h3>
-<ul>
-  <li>Lecture Hall A — Classroom, seats 20 — Room 110</li>
-  <li>Lecture Hall B — Classroom, seats 30 — Room 112</li>
-  <li>Study Commons — Open study space — Room 115</li>
-  <li>Innovation Lab — Makerspace — Room 120</li>
-</ul>
-
-<p><a href="#top">Back to top</a></p>
-
-<hr>
-
-<h2 id="floor2">Floor 2</h2>
-
-<h3>People</h3>
-<ul>
-  <li>Dr. James McCoy — Faculty — Room 203</li>
-  <li>Dr. Dana Scully — Faculty — Room 207</li>
-  <li>Mina Harker — Dept. Coordinator — Room 202</li>
-</ul>
-
-<h3>Departments</h3>
-<ul>
-  <li><a href="grayson.html#pre-med"></a>Pre-Med Department — Room 201</li>
-  <li><a href="grayson.html#forensics"></a> Forensics Department — Room 210</li>
-</ul>
-
-<h3>Rooms</h3>
-<ul>
-  <li>Conference Room 220 — Meeting space — Room 220</li>
-  <li>Library Annex — Reading room — Room 225</li>
-  <li>Robotics Lab — Research lab — Room 230</li>
-  <li>Faculty Lounge — Staff only — Room 235</li>
-</ul>
-
-<p><a href="#top">Back to top</a></p>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
