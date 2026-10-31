@@ -50,3 +50,9 @@ The biggest remaining challenge will be finalizing the design around the site fu
 Thus begins styling. Some minor changes to the UX and UI design that shouldn't ultimately change functionality. Added what should be the final piece of JavaScript via auth.js, which keeps track of whether a user is logged in and changes the option to login or logout depending on if user is in active session. If I were to present this as a final product to a school, I would remove the public login option from the page as I don't want normal users to accidentally land on the log in page. But for the sake of creating a workable project application and because that area of the page looked naked, I added it to version 1.0. 
 
 With most of the styling done on index.html, I move on to the other pages. 
+
+## Update 10/31
+
+I have removed the auth functionality, which is in line with my original intention for the product--a static search application that can't accidentally or intentionally be altered by the user. Removing user auth functionality and controlling all of the data via the Supabase console makes managing page logic vastly simpler and removes the buggy JS that was proving too challenging to work with at my skill level. The downside is that form data must be input via HTML instead of through a user console. But, I don't feel the complexity of my original scope was inline with the level of my skill or the time available to deliver this project. It was valuable to assess what would be needed to develop a scalable, mass-marketable version of this application but that functionality is not possible here, given the project constraints. 
+
+I have also decided to rework the options in the nav to link to seperate pages instead of a single directory page that is reliant on a Supabase call. I was running into too many debugging issues trying to wrangle the directory.js/directory.html into working order so I have decided to pursue my original, HTML-heavy solution. 

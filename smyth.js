@@ -12,6 +12,7 @@ function showRoom(room) {
             marker.style.display = `block`;
 }
 
+//marker
 map.addEventListener('click', function(event) {
     const rect = map.getBoundingClientRect();
     const x = ((event.clientX - rect.left) / rect.width) * 100;
@@ -19,7 +20,7 @@ map.addEventListener('click', function(event) {
     console.log(`x: ${x.toFixed(1)}, y: ${y.toFixed(1)}`);
 }); //remove after logging locations
 
-
+//grab room data
 async function loadRooms() {
     const { data, error } = await supabaseClient.from('rooms').select().eq('building', 'Smyth Hall');
 

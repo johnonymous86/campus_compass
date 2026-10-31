@@ -12,7 +12,7 @@ function showRoom(room) {
             marker.style.top = `${room.y}%`;
 
             marker.style.display = `block`;
-}
+}  //location dot logic
 
 map.addEventListener('click', function(event) {
     const rect = map.getBoundingClientRect();
