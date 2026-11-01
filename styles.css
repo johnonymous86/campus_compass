@@ -110,6 +110,12 @@
     border-radius: 16px;
 }
 
+.site-footer {
+    background-color: black;
+    color: rgba(255, 255, 255, .55);
+}
+
+
 @media (min-width: 768px) {
     .site-logo {
         height: 90px;
