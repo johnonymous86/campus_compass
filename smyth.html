@@ -39,6 +39,7 @@
                     <li class="nav-item"><a class="nav-link" href="buildings.html">Buildings</a></li>
                     <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
                     <li class="nav-item"><a class="nav-link" href="employees.html">Employees</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
                 </ul>
             </div>
         </div>
@@ -58,7 +59,6 @@
                 <option value="smyth.html?room=3">Scholarship Office</option>
                 <option value="smyth.html?room=4">Testing Center</option>
                 
-        
                </select>
             </form>
 <br>
@@ -72,6 +72,16 @@
                 <option value="smyth.html?room=12">Dr. Callum "Cal" Culator - Math Professor</option>
                 <option value="smyth.html?room=13">Dr. Flora Ide - Dental Hygiene Professor</option>
                </select>
+            </form>
+<br>      
+            <form>
+              <label for="office" class="visually-hidden">Select a classroom:</label>
+              <select name="office" id="office" class="form-select form-select-lg" onchange="window.location.href=this.value;">
+              <option value="" selected disabled hidden>Select a classroom</option>
+              <option value="smyth.html?room=6">Communications Classroom - Smyth Hall 130</option>
+              <option value="smyth.html?room=7">Smart Classroom - Smyth Hall 122</option>
+              <option value="smyth.html?room=11">Science Laboratory - Smyth Hall 195</option>
+   </select>
             </form>
         </section>
 

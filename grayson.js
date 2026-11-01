@@ -23,7 +23,7 @@ map.addEventListener('click', function(event) {
 
 
 async function loadRooms() {
-    const { data, error } = await supabaseClient.from('rooms').select().eq('building', 'Smyth Hall');
+    const { data, error } = await supabaseClient.from('rooms').select().eq('building', 'Grayson Hall');
 
     if (error) {
         console.log(error);
