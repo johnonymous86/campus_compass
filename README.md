@@ -1,4 +1,41 @@
-# vcda_poc
+# Campus Compass POC
+
+Live site URL: https://johnonymous86.github.io/campus_compass/
+
+## What is Campus Compass?
+
+Campus Compass is a static HTML, CSS, and JavaScript site, hosted on GitHub Pages. This codebase serves as a proof-of-concept website for a wayfinding directory application for college campuses. This application is designed to run on touch-screen devices located in common-areas and vestibules. The general layout and design is consistent with minimalism and ease-of-use for touch screen.
+
+## How does it work?
+
+The sites uses a Supabase DB that loads location data when building pages load. The Supabase table defines locations through id, building, room_number, name, category, floor, and X & Y coordinates. The X & Y coordinates correspond to a specific location on the building floor map. The id field sets a link destination, so that a link like "smyth.html?room=5" will resolve to the Smyth page and place a marker at the X & Y coordinate for room 5.
+
+## Basic Structure
+
+- index.html is the home page. 
+- directory.html and directory.js are the text directory that builds out site navigation.
+- supabase-client.js creates the shared Supabase client.
+- styles.css loads after Bootstrap, creating the styles for the application.
+- assets/ holds all images, floor plans, and logos. 
+
+## Editing Data
+
+The room data is edited via Supabase Table Editor and can only be accessed by the project owner.
+
+Floor plan images should be added to assets/. New buildings will follow the <building>.html and <building>.js naming convention.
+
+Stylings should be added to styles.css, not inline. 
+
+## Limitations
+
+- Only the destination, not the route, is drawn.
+- No offline caching, so kiosks that lose internet connectivity will show an empty directory.
+- Dropdown options on index.html and building pages are hand typed and do not update when new data is added to the directory.
+
+
+
+**Below is the build log for this application, presented in chronological order.** 
+
 ## Initial Post:
 
 Virtual College Directory Application Proof of Concept (take 2)
@@ -56,3 +93,8 @@ With most of the styling done on index.html, I move on to the other pages.
 I have removed the auth functionality, which is in line with my original intention for the product--a static search application that can't accidentally or intentionally be altered by the user. Removing user auth functionality and controlling all of the data via the Supabase console makes managing page logic vastly simpler and removes the buggy JS that was proving too challenging to work with at my skill level. The downside is that form data must be input via HTML instead of through a user console. But, I don't feel the complexity of my original scope was inline with the level of my skill or the time available to deliver this project. It was valuable to assess what would be needed to develop a scalable, mass-marketable version of this application but that functionality is not possible here, given the project constraints. 
 
 I have also decided to rework the options in the nav to link to seperate pages instead of a single directory page that is reliant on a Supabase call. I was running into too many debugging issues trying to wrangle the directory.js/directory.html into working order so I have decided to pursue my original, HTML-heavy solution. 
+
+## Update 11/21
+
+**Final project update**
+Finishing touches included adding location display text to the building pages so that selected location displays on page load. Additionally, a complete README.md was added with project outline, structure, and basic editing instructions. Thank you for reading!
