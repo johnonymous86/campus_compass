@@ -2,6 +2,7 @@ const marker = document.getElementById('marker');
 const map = marker.parentElement; //remove after logging locations
 const params = new  URLSearchParams(window.location.search);
 const requestedRoom = params.get('room');
+const roomInfo = document.getElementById('room-info');
 
 function showRoom(room) {
 
@@ -10,7 +11,11 @@ function showRoom(room) {
             marker.style.top = `${room.y}%`;
 
             marker.style.display = `block`;
-}
+
+            roomInfo.textContent = `${room.name} - Room ${room.room_number}`;
+
+
+        }
 
 //marker
 map.addEventListener('click', function(event) {

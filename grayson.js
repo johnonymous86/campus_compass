@@ -1,9 +1,10 @@
 
 const list = document.getElementById('room-list');
 const marker = document.getElementById('gr-marker');
-const map = marker.parentElement; //remove after logging locations
 const params = new  URLSearchParams(window.location.search);
 const requestedRoom = params.get('room');
+const roomInfo = document.getElementById('room-info');
+
 
 function showRoom(room) {
 
@@ -12,14 +13,11 @@ function showRoom(room) {
             marker.style.top = `${room.y}%`;
 
             marker.style.display = `block`;
-}  //location dot logic
 
-map.addEventListener('click', function(event) {
-    const rect = map.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    console.log(`x: ${x.toFixed(1)}, y: ${y.toFixed(1)}`);
-}); //remove after logging locations
+            roomInfo.textContent = `${room.name} - Room ${room.room_number}`;
+}  //Show location dot and display room information
+
+
 
 
 async function loadRooms() {
@@ -28,7 +26,7 @@ async function loadRooms() {
     if (error) {
         console.log(error);
         return;
-    }
+    } //pull location data
    
 
 
